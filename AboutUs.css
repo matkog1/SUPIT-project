@@ -18,11 +18,12 @@
   transform: translateY(-2px);
 }
 
-.nav-item img{
+.nav-item-left img{
   filter: invert(1);
   margin-right: 5px;
   width: 20px;
   height: 20px;
+  transition: transform 0.3s;
 }
 
 .image-container img{
@@ -30,8 +31,159 @@
   height: 250px;
   object-fit: cover;
   position:relative;
-
 }
+
+.image-container{
+  animation-name: slideDown;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+
+.nav-item-right{
+  animation-name: slideFromLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-delay: 1s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: backwards;
+}
+
+.nav-item-left{
+  animation-name: slideFromRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-delay: 1s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: backwards;
+}
+
+
+@keyframes slideFromLeft{
+  from{
+    transform: translateX(800px);
+  }
+  to{
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideDown{
+  from{
+      transform: translateY(-500px);
+  }
+  to{
+      transform: translateY(0);
+  }
+}
+
+@keyframes slideFromRight{
+  from{
+    transform: translateX(-800px);
+  }
+  to{
+    transform: translateX(0);
+  }
+}
+
+#oNama{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 100px;
+  text-align: center;
+  font-weight: 900;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+
+#oNama2{
+  width: 500px;
+  border-bottom: 4px solid orange;
+}
+
+#div1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 100px;
+  background-color:skyblue;
+  color: black;
+  font-weight: 900;
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  
+}
+
+#div1 img{
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+}
+
+#div2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 250px;
+  background-color:#f2f2f2;
+  padding: 200px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  #div3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: red;
+    color: black;
+    width: 100%;
+    height: 600px;
+  }
+  
+  .card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .card-header {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    background-color: white;
+    color: black;
+    height: 100%;
+  }
+  
+  .container-fluid {
+    padding: 0px;
+  }
+
+
+
+
+
+
+
+
 
 
 
