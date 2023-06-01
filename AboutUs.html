@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,34 +8,67 @@
   <title>Document</title>
   <link rel="stylesheet" href="css/bootstrap.css">
   <script src="js/bootstrap.bundle.js"></script>
-  <link rel="stylesheet" href="/HomePage.css">
+  <link rel="stylesheet" href="/AboutUs.css">
   <script src="/HomePage.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
-  <nav class="navbar bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
-    <div class="container-left">
-        <a class="navbar-brand" href="#">
-          <img src="/img/box-arrow-in-right.svg">
-            Prijavi se
-        </a>
-      <a class="navbar-brand" href="/HomePage.html">
-        <img src="/img/house.svg">
-        Home
-      </a>
-      <a class="navbar-brand" href="/AboutUs.html">
-        <img src="/img/chat-left.svg">
-        O Nama
-      </a>
-      <a class="navbar-brand" href="#">
-        <img src="/img/newspaper.svg">
-        Novosti
-      </a>
-      <a class="navbar-brand" href="#">
-        <img src="/img/envelope.svg">
-        Kontakt
-      </a>
-    </div>
-</nav>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="navbar-collapse collapse w-100 order-1 dual-collapse2">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">
+                      <img src="img/box-arrow-in-right.svg" alt="">
+                      Prijava</a>
+                </li>
+                <li class="nav-item">        
+                    <a class="nav-link" href="HomePage.html"> 
+                      <img src="img/house.svg" alt="">
+                      Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="AboutUs.html">
+                      <img src="img/chat-left.svg" alt="">
+                      O nama</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <img src="img/newspaper.svg" alt="">
+                      Novosti</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <img src="img/envelope.svg" alt="">
+                      Kontakti</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mx-auto order-0">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Naše vrijednosti</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Povijest</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Algebra grupa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Kako do nas</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+  <div class="image-container">
+    <img src="/img/kampus-iz-zraka-min-1.jpg" alt="">
+  </div>
 </body>
+
 </html>
