@@ -233,6 +233,15 @@
   position: relative;
 }
 
+#cards-cert{
+  display: block;
+}
 
-  
-
+#cards-cert img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  width: 50%;
+  height: 50%;
+}
