@@ -1,6 +1,9 @@
 .navbar{
   width: auto;
   height: 50px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 
@@ -63,6 +66,62 @@
   animation-fill-mode: backwards;
 }
 
+.container-fluid{
+  animation-name: slideFromDown;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.card {
+    display: inline-block;
+    height: 400px;
+    width: 300px;
+    margin-top: 50px;
+}
+  .card-header {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    font-size: smaller;
+    height:50px;
+  }
+  
+  .card-body {
+    background-color: white;
+    color: black;
+    overflow: hidden;
+    word-wrap: break-word;
+  }
+  
+  .card-text {
+    font-size: smaller;
+    text-align: justify;
+  }
+  
+  .container-fluid {
+    padding: 0;
+  }
+
+  #card-info{
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+    margin-top: 0px;
+  }
 
 @keyframes slideFromLeft{
   from{
@@ -91,6 +150,15 @@
   }
 }
 
+@keyframes slideFromDown{
+  from{
+      transform: translateY(500px);
+  }
+  to{
+      transform: translateY(0);
+  }
+ }
+
 #oNama{
   display: flex;
   justify-content: center;
@@ -108,82 +176,63 @@
   border-bottom: 4px solid orange;
 }
 
-#div1{
+#div1,#div4,#div7{
   display: flex;
   justify-content: center;
   align-items: center;
   width: auto;
   height: 100px;
-  background-color:skyblue;
+  background-color:white;
   color: black;
   font-weight: 900;
   font-size: 20px;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  
 }
 
-#div1 img{
+#div1 img,#div4 img,#div7 img {
   width: 30px;
   height: 30px;
   margin-right: 15px;
 }
 
-#div2{
+#div2,#div5,#div8{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   width: auto;
-  height: 250px;
+  height: 100px;
   background-color:#f2f2f2;
   padding: 200px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   }
 
-  #div3 {
+  #div2-1,#div2-2,#div5-1,#div5-2,#div8-1,#div8-2{
+    width: 800px;
+    height: 500px;
+    margin:10px;
+    text-align: justify;
+  }
+
+  #div3{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: red;
+    background-color: white;
     color: black;
     width: 100%;
     height: 600px;
+    overflow: hidden;
   }
+
+
+#card-pic img{
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+
   
-  .card {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  
-  .card-header {
-    color: black;
-    font-weight: bold;
-    text-align: center;
-  }
-  
-  .card-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: justify;
-    background-color: white;
-    color: black;
-    height: 100%;
-  }
-  
-  .container-fluid {
-    padding: 0px;
-  }
-
-
-
-
-
-
-
-
-
-
 
