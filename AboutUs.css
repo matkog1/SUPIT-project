@@ -176,7 +176,7 @@
   border-bottom: 4px solid orange;
 }
 
-#div1,#div4,#div7{
+#div1,#div4,#div7,#div10{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -189,7 +189,7 @@
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-#div1 img,#div4 img,#div7 img {
+#div1 img,#div4 img,#div7 img, #div10 img {
   width: 30px;
   height: 30px;
   margin-right: 15px;
@@ -233,15 +233,26 @@
   position: relative;
 }
 
-#cards-cert{
-  display: block;
-}
-
-#cards-cert img{
+#certification-cards-top img{
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0px;
-  width: 50%;
+  width: 75%;
   height: 50%;
 }
+
+#certification-cards-bottom img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  width: 75%;
+  height: 50%;
+}
+
+#kakoDoNas{
+  background-image: url(img/kakoDoNas.jpg);
+  height: 750px;
+}
+
