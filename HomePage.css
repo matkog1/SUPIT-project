@@ -1,8 +1,10 @@
 .navbar{
   width: auto;
   height: 50px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
-
 
 .nav-link{
   color: orange;
