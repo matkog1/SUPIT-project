@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="News1.css">
+    <script src="js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <title>News One</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="navbar-collapse collapse w-100 order-1 dual-collapse2">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">
+                        <img src="img/box-arrow-in-right.svg" alt="">
+                        Prijava</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HomePage.html">
+                        <img src="img/house.svg" alt="">
+                        Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="AboutUs.html">
+                        <img src="img/chat-left.svg" alt="">
+                        O nama</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="NewsPage.html">
+                        <img src="img/newspaper.svg" alt="">
+                        Novosti</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img src="img/envelope.svg" alt="">
+                        Kontakti</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mx-auto order-0">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <div class="image-container">
+        <img src="img/novost1.jpg" alt="">
+        <h1>Student Josip Stanešić 12. je sistemaš svijeta i dobitnik medalje izvrsnosti.</h1>
+    </div>
+    <div id="divWorldSkills">
+        <div id="divWorldSkills-2" class="container-fluid">
+            <p>WorldSkills natjecanje - Kazan 2019.</p>
+        </div>
+    </div>
+    <div class="container">
+        <p style="font-weight: 500; justify-content: center; text-align: justify;">
+            Nakon godinu dana priprema za natjecanje WorldSkills
+            Kazan 2019 na kojem je sudjelovalo 1300 natjecatelja iz
+            cijelog svijeta, trud se itekako isplatio. Josip,
+            student 3. godine preddiplomskog studija sistemskog
+            inženjerstva osvojio je 12. mjesto u vještini IT
+            Networks and System Administration te osvojio medalju
+            izvrsnosti! Čestitke Josipu ali i njegovim/našim
+            mentorima koji su ga pripremali za ovo natjecanje –
+            voditelju studija sistemskog inženjerstva Silviju
+            Papiću, voditelju katedre za operacijske sustave –
+            Vedranu Dakiću i asistentu na studiju sistemskog
+            inženjerstva – Jasminu Redžepagiću. Čestitke i našem
+            studentu 3.godine preddiplomskog studija programskog
+            inženjerstva Josipu Horvatu i mentoru voditelju katedre
+            za programsko inženjerstvo - Goranu Đambiću na osvojenom
+            16.mjestu u vještini IT Software Solutions for Business.
+        </p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="fancybox col p-0">
+                <a href="img/galerija1.jpg" data-fancybox="gallery" style="padding-right: 10px;">
+                    <img src="img/galerija1.jpg" alt="Image 1">
+                </a>
+            </div>
+            <div class="fancybox col p-0">
+                <a href="img/galerija2.jpg" data-fancybox="gallery">
+                    <img src="img/galerija2.jpg" alt="Image 2">
+                </a>
+            </div>
+          
+        </div>
+    </div>
+    <div class="container">
+            <video width="600px" height="400px" controls>
+                <source src="video/worldskills.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    <div id="bottomPic" class="image-container">
+        <img src="img/zaiskri-bg.jpg" alt="">
+        <a href="/AboutUs.html"></a>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $(".fancybox a").fancybox({
+            });
+        });
+    </script>
+</body>
+
+</html>
