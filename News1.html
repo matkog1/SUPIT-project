@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-    <title>News One</title>
+    <title>News #1</title>
 </head>
 
 <body>
@@ -39,9 +39,9 @@
                         Novosti</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalForm">
                         <img src="img/envelope.svg" alt="">
-                        Kontakti</a>
+                        Kontakt</a>
                 </li>
             </ul>
         </div>
@@ -92,19 +92,57 @@
                     <img src="img/galerija2.jpg" alt="Image 2">
                 </a>
             </div>
-          
+
         </div>
     </div>
     <div class="container">
-            <video width="600px" height="400px" controls>
-                <source src="video/worldskills.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
+        <video width="600px" height="400px" controls>
+            <source src="video/worldskills.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
     </div>
     <div id="bottomPic" class="image-container">
         <img src="img/zaiskri-bg.jpg" alt="">
         <a href="/AboutUs.html"></a>
+    </div>
+    <div class="container">
+        <div class="modal" id="modalForm">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"> Contact us</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInputName"
+                                    placeholder="Ime i prezime">
+                                <label for="floatingInputName">Ime i prezime</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="floatingInputEmail" placeholder="E-mail">
+                                <label for="floatingInputEmail">E-mail</label>
+                            </div>
+                            <div class="mb-3">
+                                <select class="form-select">
+                                    <option selected>Važnost poruke</option>
+                                    <option value="1">Niska</option>
+                                    <option value="1">Srednja</option>
+                                    <option value="2">Visoka</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control col-xs-12"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" onclick="submitForm(event)">Submit</button>
+                            <button type="cancel" class="btn btn-danger">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script>
         $(document).ready(function () {

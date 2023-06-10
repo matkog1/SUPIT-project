@@ -67,39 +67,11 @@
     border-bottom: 4px solid orange;
   }
 
-  .fancybox{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .modal-header{
+    background-color: orange;
+    color: white;
   }
 
-  .fancybox:hover{
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    transform: scale(1.1);
+  .modal-body textarea{
+    height: 200px;
   }
-
-
-  .fancybox img{
-    width: 100%;
-    height: 50%;
-    border-radius: 5%;
-    transition: box-shadow 0.3s ease-in-out;
-  }
-
-.container {
-  justify-content: center;
-  display: flex;
-}
-
-#bottomPic{
-  padding-top: 50px;
-}
-
-.modal-header{
-  background-color: orange;
-  color: white;
-}
-
-.modal-body textarea{
-  height: 200px;
-}

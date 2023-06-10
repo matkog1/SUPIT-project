@@ -46,3 +46,12 @@
     background-color: rgba(0, 0, 0, 0.3);
     padding: 20px;
   }
+
+  .modal-header{
+    background-color: orange;
+    color: white;
+  }
+
+  .modal-body textarea{
+    height: 200px;
+  }

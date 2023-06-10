@@ -129,3 +129,11 @@
     position: relative;
   }
 
+  .modal-header{
+    background-color: orange;
+    color: white;
+  }
+  
+  .modal-body textarea{
+    height: 200px;
+  }
