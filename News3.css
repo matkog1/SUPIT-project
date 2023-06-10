@@ -78,7 +78,7 @@
 
   #TopPicContainer{
     animation-name: slideFromTop;
-    animation-duration: 1s;
+    animation-duration: 1.2s;
     animation-timing-function: ease-out;
     animation-delay: 0s;
     animation-iteration-count: 1;
@@ -87,7 +87,7 @@
 
   #divJunior{
     animation-name: bounce;
-    animation-duration: 1s;
+    animation-duration: 1.2s;
   }
 
   @keyframes slideFromTop{
