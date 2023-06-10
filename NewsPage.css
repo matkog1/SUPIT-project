@@ -19,6 +19,29 @@
   .nav-item:hover{
     transform: translateY(-2px);
   }
+
+  .nav-item,#NewsDiv{
+    animation-name: slideFromTop;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+  }
+
+  #bottomPic{
+    animation-name: slideFromBottom;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+  }
+
+ #PicsContainer{
+    animation: loadingAnimation 1s;
+  }
+
   
   .nav-item img{
     filter: invert(1);
@@ -136,4 +159,31 @@
   
   .modal-body textarea{
     height: 200px;
+  }
+
+  @keyframes slideFromTop{
+    from{
+      transform: translateY(-200px);
+    }
+    to{
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideFromBottom{
+    from{
+      transform: translateY(800px);
+    }
+    to{
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes loadingAnimation{
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1.2);
+    }
   }

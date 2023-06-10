@@ -103,3 +103,43 @@
 .modal-body textarea{
   height: 200px;
 }
+
+.image-container{
+  animation-name: slideFromTop;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+}
+
+#divWorldSkills{
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+}
+
+@keyframes slideFromTop{
+  from{
+    transform: translateY(-400px);
+  }
+  to{
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.2);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
