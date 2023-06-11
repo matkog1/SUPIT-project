@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="Login.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
-    <script src="Login.js"></script>
+    <script src="Register.js"></script>
 
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
@@ -51,22 +51,21 @@
     </nav>
     <div id="formContainer" class="container d-flex align-items-center justify-content-center " style="height: 600px;">
         <div class="w-50">
-            <h4 class="text-center my-3">PRIJAVA KORISNIKA</h4>
-            <form id="loginForm">
+            <h4 class="text-center my-3">REGISTRACIJA KORISNIKA</h4>
+            <form id="registerForm">
                 <div class="form-group">
                     <label for="username">
-                        <h5>Korisničko ime</h5>
+                        <h5>Email</h5>
                     </label>
-                    <input type="text" class="form-control" id="username" placeholder="Unesite korisničko ime">
+                    <input type="email" class="form-control" id="email" placeholder="Unesite email" required>
                 </div>
                 <div class="form-group mt-3">
                     <label for="password">
                         <h5>Lozinka</h5>
                     </label>
-                    <input type="password" class="form-control" id="password" placeholder="Unesite lozinku">
+                    <input type="password" class="form-control" id="password" placeholder="Unesite lozinku" required>
                 </div>
-                <button id="LoginButton" type="submit" class="btn btn-primary mt-3">Prijavi se</button>
-                <button id="registerButton" type="button" class="btn btn-secondary mt-3" onclick="location.href='Register.html'">Registracija</button>
+                <button id="registerButton" type="submit" class="btn btn-primary mt-3">Registriraj se</button>
             </form>
         </div>
     </div>
