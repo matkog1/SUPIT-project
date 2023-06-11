@@ -5,6 +5,10 @@
     top: 0;
     z-index: 100;
   }
+
+  .additional-content {
+    display: none;
+  }
   
   .nav-link{
     color: orange;
