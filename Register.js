@@ -18,7 +18,7 @@ $(document).ready(function() {
             success: function(response) {
                 console.log(response);
                 alert('Registration successful!');
-                window.location.href = "NewsPage.html";
+                window.location.href = "Login.html";
             },
             error: function(jqXHR, textStatus, errorThrown) {
                 console.log("HTTP Status: " + jqXHR.status); // Check the HTTP Status

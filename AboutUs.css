@@ -116,6 +116,11 @@
     padding: 0;
   }
 
+  .additional-content {
+    display: none;
+}
+  
+
   #card-info{
     width: 100%;
     padding-top: 100%;
