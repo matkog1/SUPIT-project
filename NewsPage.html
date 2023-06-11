@@ -16,7 +16,7 @@
         <div class="navbar-collapse collapse w-100 order-1 dual-collapse2">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="Login.html">
                         <img src="img/box-arrow-in-right.svg" alt="">
                         Prijava</a>
                 </li>
@@ -55,7 +55,7 @@
     </div>
     <div id="PicsContainer" class="container-fluid">
         <div class="row" style="align-items: center;">
-            <div class="col-lg-4 col-md-6">
+            <div id="PictureLeft" class="col-lg-4 col-md-6">
                 <a href="News1.html" id="roundedpic1">
                     <div class="container">
                         <p style="color: yellow;">28.08.2019</p>
@@ -64,7 +64,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div id="PictureMiddle" class="col-lg-4 col-md-6">
                 <a href="News2.html" id="roundedpic2">
                     <div class="container">
                         <p style="color: yellow;">22.07.2019</p>
@@ -72,7 +72,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div id="PictureRight" class="col-lg-4 col-md-6">
                 <a href="News3.html" id="roundedpic3">
                     <div class="container">
                         <p style="color: yellow;">18.04.2019</p>
@@ -82,7 +82,7 @@
             </div>
         </div>
     </div>
-    <div class="image-container">
+    <div id="bottomPic" class="image-container">
         <img src="img/zaiskri-bg.jpg" alt="">
     </div>
     <div class="container">
@@ -94,29 +94,35 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form action="https://www.fulek.com/mvc/supit/project-contact-form" method="POST">
                             <div class="form-floating mb-3">
                                 <input type="text" class="form-control" id="floatingInputName"
-                                    placeholder="Ime i prezime">
+                                    placeholder="Ime i prezime" name="FullName">
                                 <label for="floatingInputName">Ime i prezime</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="email" class="form-control" id="floatingInputEmail" placeholder="E-mail">
+                                <input type="email" class="form-control" id="floatingInputEmail" placeholder="E-mail"
+                                    name="Email">
                                 <label for="floatingInputEmail">E-mail</label>
                             </div>
                             <div class="mb-3">
-                                <select class="form-select">
+                                <select class="form-select" name="Importance">
                                     <option selected>Važnost poruke</option>
-                                    <option value="1">Niska</option>
-                                    <option value="1">Srednja</option>
-                                    <option value="2">Visoka</option>
+                                    <option value="Niska">Niska</option>
+                                    <option value="Srednja">Srednja</option>
+                                    <option value="Visoka">Visoka</option>
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <textarea class="form-control col-xs-12"></textarea>
+                                <textarea class="form-control col-xs-12" name="Message"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary" onclick="submitForm(event)">Submit</button>
-                            <button type="cancel" class="btn btn-danger">Cancel</button>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="newsletterCheck"
+                                    name="ReceiveNewsletter">
+                                <label class="form-check-label" for="newsletterCheck">Obavijesti</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
                         </form>
                     </div>
                 </div>

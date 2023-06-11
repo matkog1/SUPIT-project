@@ -5,21 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="News3.css">
+    <link rel="stylesheet" href="Login.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-    <title>News #3</title>
-</head>
 
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div class="navbar-collapse collapse w-100 order-1 dual-collapse2">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="Login.html">
+                    <a class="nav-link" href="#">
                         <img src="img/box-arrow-in-right.svg" alt="">
                         Prijava</a>
                 </li>
@@ -51,40 +48,58 @@
             </button>
         </div>
     </nav>
-    <div id="TopPicContainer" class="image-container">
-        <img src="img/novost3.jpg" alt="">
-    </div>
-    <div id="divJunior">
-        <div id="divJunior-2" class="container-fluid">
-            <p>Digitalno Junior ljeto</p>
+    <div id="formContainer" class="container d-flex align-items-center justify-content-center " style="height: 600px;">
+        <div class="w-50">
+            <h4 class="text-center my-3">PRIJAVA KORISNIKA</h4>
+            <form>
+                <div class="form-group">
+                    <label for="username">
+                        <h5>Korisničko ime</h5>
+                    </label>
+                    <input type="text" class="form-control" id="username" placeholder="Unesite korisničko ime">
+                </div>
+                <div class="form-group mt-3">
+                    <label for="password">
+                        <h5>Lozinka</h5>
+                    </label>
+                    <input type="password" class="form-control" id="password" placeholder="Unesite lozinku">
+                </div>
+                <button id="LoginButton" type="submit" class="btn btn-primary mt-3">Prijavi se</button>
+                <button type="button" class="btn btn-secondary mt-3" data-bs-toggle="modal" data-bs-target="#registerModal">Registracija</button>
+            </form>
         </div>
     </div>
-    <div class="container">
-        <p
-            style="font-weight: 500; justify-content: center; text-align: justify; margin-top: 30px; margin-bottom: 50px;">
-            Nakon velikog broja prijava koje smo primili, detaljnom
-            analizom i provjerom utvrdili smo dobitnike ovogodišnjeg
-            stipendijskog natječaja za maturante! Stipendiju u
-            vrijednosti od 10.000,00 kuna na potrošačkoj kartici
-            dobivaju: Heidi Sokolovski iz Zagreba - za najbolji
-            rezultat iz Matematike na A razini osvojila je
-            stipendiju u iznosu od 10.000,00 kn. Tereza Žugaj iz
-            Zagreba - za najbolji rezultat iz Matematike na B razini
-            osvojila je stipendiju u iznosu od 10.000,00 kn. Dalija
-            Romac iz Sinja - za najbolji rezultat iz Hrvatskog
-            jezika na A razini te dodatna 204 boda za rezultat iz
-            Matematike A i Engleskog jezika A osvojila je stipendiju
-            u iznosu od 10.000,00 kn. Ella Milinović iz Zagreba - za
-            najbolji rezultat iz Hrvatskog jezika na B razini
-            osvojila je stipendiju u iznosu od 10.000,00 kn. Borna
-            Skračić iz Zadra – za najbolji rezultat iz Engleskog
-            jezika na A razini osvojio je stipendiju u iznosu od
-            10.000,00 kn. Lukas Božić iz Umaga - za najbolji
-            rezultat iz Engleskog jezika na B razini osvojio je
-            stipendiju u iznosu od 10.000,00 kn.
-        </p>
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Register</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="registerForm">
+                        <div class="form-group">
+                            <label for="registerUsername">Username</label>
+                            <input type="text" class="form-control" id="registerUsername" required>
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="registerPassword">Password</label>
+                            <input type="password" class="form-control" id="registerPassword" required>
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="registerEmail">Email</label>
+                            <input type="email" class="form-control" id="registerEmail" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="registerSubmit">Register</button>
+                </div>
+            </div>
+        </div>
     </div>
-    <div id="bottomPic" class="image-container">
+    <div class="image-container">
         <img src="img/zaiskri-bg.jpg" alt="">
         <a href="/AboutUs.html"></a>
     </div>

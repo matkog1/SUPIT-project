@@ -50,7 +50,7 @@
     transform: translate(-50%, -50%);
 }
 
-#divWorldSkills{
+#MiddleTextDiv{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,7 +62,7 @@
     font-size: 20px;
   }
   
-  #divWorldSkills-2{
+  #MiddleTextDiv-2{
     width: 500px;
     border-bottom: 4px solid orange;
   }
@@ -74,4 +74,40 @@
 
   .modal-body textarea{
     height: 200px;
+  }
+
+
+  #TopPicContainer{
+      animation-name: slideFromTop;
+      animation-duration: 1.2s;
+      animation-timing-function: ease-out;
+      animation-delay: 0s;
+      animation-iteration-count: 1;
+      animation-direction: normal;
+    }
+
+  #MiddleTextDiv{
+    animation-name: bounce;
+    animation-duration: 1.2s;
+  }
+
+  @keyframes slideFromTop{
+    from{
+      transform: translateY(-400px);
+    }
+    to{
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes bounce{
+    0%{
+      transform: scale(1);
+    }
+    50%{
+      transform: scale(1.2);
+    }
+    100%{
+      transform: scale(1);
+    }
   }

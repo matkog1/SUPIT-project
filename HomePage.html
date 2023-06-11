@@ -7,17 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="/HomePage.css">
+    <link rel="stylesheet" href="HomePage.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
-    <script src="/HomePage.js"></script>
 
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div class="navbar-collapse collapse w-100 order-1 dual-collapse2">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="Login.html">
                         <img src="img/box-arrow-in-right.svg" alt="">
                         Prijava</a>
                 </li>
@@ -64,29 +63,35 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form action="https://www.fulek.com/mvc/supit/project-contact-form" method="POST">
                             <div class="form-floating mb-3">
                                 <input type="text" class="form-control" id="floatingInputName"
-                                    placeholder="Ime i prezime">
+                                    placeholder="Ime i prezime" name="FullName">
                                 <label for="floatingInputName">Ime i prezime</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="email" class="form-control" id="floatingInputEmail" placeholder="E-mail">
+                                <input type="email" class="form-control" id="floatingInputEmail" placeholder="E-mail"
+                                    name="Email">
                                 <label for="floatingInputEmail">E-mail</label>
                             </div>
                             <div class="mb-3">
-                                <select class="form-select">
+                                <select class="form-select" name="Importance">
                                     <option selected>Važnost poruke</option>
-                                    <option value="1">Niska</option>
-                                    <option value="1">Srednja</option>
-                                    <option value="2">Visoka</option>
+                                    <option value="Niska">Niska</option>
+                                    <option value="Srednja">Srednja</option>
+                                    <option value="Visoka">Visoka</option>
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <textarea class="form-control col-xs-12"></textarea>
+                                <textarea class="form-control col-xs-12" name="Message"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary" onclick="submitForm(event)">Submit</button>
-                            <button type="cancel" class="btn btn-danger">Cancel</button>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="newsletterCheck"
+                                    name="ReceiveNewsletter">
+                                <label class="form-check-label" for="newsletterCheck">Obavijesti</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
                         </form>
                     </div>
                 </div>
