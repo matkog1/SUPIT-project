@@ -4,7 +4,8 @@ window.onload = function CheckUser() {
     if(localStorage.getItem('userLoggedIn') === 'true') {
         // Show additional content
         $('.additional-content').css('display', 'block');
-        $('#LoginText').text("Odjava");
+        $('#LoginText').html("Odjava " + "<span style='color: orange;'>" + sessionStorage.getItem('username') + "</span>");
+
     } else {
         // Hide additional content
         $('.additional-content').css('display', 'none');
@@ -62,7 +63,6 @@ $(document).ready(function() {
 
             // Hide additional content
             $('.additional-content').css('display', 'none');
-
             // Change text back to "Prijava"
             $('#LoginText').text("Prijava");
         } else {

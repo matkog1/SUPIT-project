@@ -3,7 +3,7 @@ window.onload = function () {
     if(localStorage.getItem('userLoggedIn') === 'true') {
         // Show additional content
         $('.additional-content').css('display', 'block');
-        $('#LoginText').text("logout")
+        $('#LoginText').text("Odjava");
     } else {
         // Hide additional content
         $('.additional-content').css('display', 'none');

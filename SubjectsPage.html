@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Subject Page</title>
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="Login.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="SubjectsPage.css">
+    <script src="SubjectsPage.js"></script>
     <script src="Login.js"></script>
+</head>
 
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
@@ -18,7 +22,7 @@
             <ul class="navbar-nav me-auto">
                 <li class="nav-item active">
                     <a id="LoginText" class="nav-link" href="Login.html">
-                        <img id="LoginImage" src="img/box-arrow-in-right.svg" alt="">
+                        <img src="img/box-arrow-in-right.svg" alt="">
                         Prijava</a>
                 </li>
                 <li class="nav-item">
@@ -41,6 +45,11 @@
                         <img src="img/envelope.svg" alt="">
                         Kontakt</a>
                 </li>
+                <li class="nav-item additional-content">
+                    <a class="nav-link" href="SubjectsPage.html">
+                        <img src="img/book.svg" alt="">
+                        Nastavni plan</a>
+                </li>
             </ul>
         </div>
         <div class="mx-auto order-0">
@@ -49,30 +58,46 @@
             </button>
         </div>
     </nav>
-    <div id="formContainer" class="container d-flex align-items-center justify-content-center " style="height: 600px;">
-        <div class="w-50">
-            <h4 class="text-center my-3">PRIJAVA KORISNIKA</h4>
-            <form id="loginForm">
-                <div class="form-group">
-                    <label for="username">
-                        <h5>Korisničko ime</h5>
-                    </label>
-                    <input type="text" class="form-control" id="username" placeholder="Unesite korisničko ime">
-                </div>
-                <div class="form-group mt-3">
-                    <label for="password">
-                        <h5>Lozinka</h5>
-                    </label>
-                    <input type="password" class="form-control" id="password" placeholder="Unesite lozinku">
-                </div>
-                <button id="LoginButton" type="submit" class="btn btn-primary mt-3">Prijavi se</button>
-                <button id="registerButton" type="button" class="btn btn-secondary mt-3" onclick="location.href='Register.html'">Registracija</button>
-            </form>
+    <div id="SubjectsDiv">
+        <div id="SubjectsDiv-2" class="container-fluid">
+            <p>Nastavni Plan</p>
         </div>
     </div>
-    <div class="image-container">
-        <img src="img/zaiskri-bg.jpg" alt="">
-        <a href="/AboutUs.html"></a>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label id="labelKolegij" for="Kolegij">Kolegij:</label>
+                    <input type="text" class="form-control awesomplete" id="odabirKolegija"
+                        placeholder="Unos naziva kolegija..." autocomplete="off" autofocus
+                        oninput="suggest(this.value)">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="table-responsive">
+                    <table class="table table-striped" id="tableKolegij"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <table class="table table-striped table-hover" id="tableKolegij">
+            <thead>
+                <tr>
+                    <th>Kolegij</th>
+                    <th>ECTS</th>
+                    <th>Sati</th>
+                    <th>Predavanja</th>
+                    <th>Vjezbe</th>
+                    <th>Tip</th>
+                    <th>Semester</th>
+                    <th>Ukloni</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
     </div>
     <div class="container">
         <div class="modal" id="modalForm">
