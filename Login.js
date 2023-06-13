@@ -1,13 +1,13 @@
 window.onload = function CheckUser() {
     
-    // check if the user is logged in
+
     if(localStorage.getItem('userLoggedIn') === 'true') {
         // Show additional content
         $('.additional-content').css('display', 'block');
         $('#LoginText').html("Odjava " + "<span style='color: orange;'>" + sessionStorage.getItem('username') + "</span>");
 
     } else {
-        // Hide additional content
+
         $('.additional-content').css('display', 'none');
         sessionStorage.setItem('uspijesnaPrijava', false);
         sessionStorage.setItem('username', null);
@@ -21,6 +21,11 @@ $(document).ready(function() {
 
         var username = $('#username').val();
         var password = $('#password').val();
+
+        if (username.trim() === "" || password.trim() === "" || username.trim() === null || password.trim() ===null) {
+            alert('Both username and password fields must be filled out.');
+            return;
+        }
 
         var data = {
             username: username,
@@ -39,13 +44,12 @@ $(document).ready(function() {
                 sessionStorage.setItem('uspijesnaPrijava', true);
                 sessionStorage.setItem('username', data.data.username);
                 sessionStorage.setItem('token', data.data.token);
-                // Set a flag in localStorage to indicate the user is logged in
                 localStorage.setItem('userLoggedIn', 'true');
                 
-                alert('Uspješna prijava :) Na početnu stranicu za 3,2,1...');
+                alert('Login sucessful');
                 setTimeout(() => {
                     window.location.href = "HomePage.html";
-                }, 3000);
+                }, 500);
             }else{
                 alert('Login failed, please try again.');
             }
@@ -55,19 +59,19 @@ $(document).ready(function() {
 
     $('#LoginText').click(function() {
         if(localStorage.getItem('userLoggedIn') === 'true') {
-            // The user is logged in, so log them out
+
             localStorage.removeItem('userLoggedIn');
             sessionStorage.removeItem('uspijesnaPrijava');
             sessionStorage.removeItem('username');
             sessionStorage.removeItem('token');
 
-            // Hide additional content
+
             $('.additional-content').css('display', 'none');
-            // Change text back to "Prijava"
+
             $('#LoginText').text("Prijava");
         } else {
-            // The user is not logged in, so redirect them to the login page
-            window.location.href = "HomePage.html"; // Replace with your actual login page URL
+
+            window.location.href = "HomePage.html"; // 
         }
     });
 });

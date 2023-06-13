@@ -47,7 +47,7 @@
 }
 
 .nav-item-right{
-  animation-name: slideFromLeft;
+  animation-name: slideFromRight;
   animation-duration: 1s;
   animation-timing-function: ease-out;
   animation-delay: 1s;
@@ -57,7 +57,7 @@
 }
 
 .nav-item-left{
-  animation-name: slideFromRight;
+  animation-name: slideFromLeft;
   animation-duration: 1s;
   animation-timing-function: ease-out;
   animation-delay: 1s;
@@ -119,6 +119,15 @@
   .additional-content {
     display: none;
 }
+
+.modal-header{
+  background-color: orange;
+  color: white;
+}
+
+.modal-body textarea{
+  height: 200px;
+}
   
 
   #card-info{
@@ -128,9 +137,9 @@
     margin-top: 0px;
   }
 
-@keyframes slideFromLeft{
+@keyframes slideFromRight{
   from{
-    transform: translateX(800px);
+    transform: translateX(900px);
   }
   to{
     transform: translateX(0);
@@ -146,9 +155,9 @@
   }
 }
 
-@keyframes slideFromRight{
+@keyframes slideFromLeft{
   from{
-    transform: translateX(-800px);
+    transform: translateX(-900px);
   }
   to{
     transform: translateX(0);
@@ -163,44 +172,46 @@
       transform: translateY(0);
   }
  }
+ @font-face {
+   font-family: "SecularOne-Regular";
+   src: url(/fonts/SecularOne-Regular.ttf) format("truetype");
+ }
 
-#oNama{
+#AboutUsText{
   display: flex;
   justify-content: center;
   align-items: center;
   width: auto;
   height: 100px;
   text-align: center;
-  font-weight: 900;
-  font-family:Georgia, 'Times New Roman', Times, serif;
-  font-size: 20px;
+  font-family: "SecularOne-Regular",sans-serif;
+  font-size: 30px;
 }
 
-#oNama2{
+#AboutUsText-2{
   width: 500px;
   border-bottom: 4px solid orange;
 }
 
-#div1,#div4,#div7,#div10{
+
+#ValuesDiv,#HistoryTextDiv,#AlgebraGroupDiv,#DirectionsDiv{
   display: flex;
   justify-content: center;
   align-items: center;
   width: auto;
   height: 100px;
   background-color:white;
-  color: black;
-  font-weight: 900;
-  font-size: 20px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: "SecularOne-Regular",sans-serif;
+  font-size: 30px;
 }
 
-#div1 img,#div4 img,#div7 img, #div10 img {
+#ValuesDiv img,#HistoryTextDiv img,#AlgebraGroupDiv img, #DirectionsDiv img {
   width: 30px;
   height: 30px;
   margin-right: 15px;
 }
 
-#div2,#div5,#div8{
+#ValuesContainer,#HistoryText,#AlgebraGroupText{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -210,17 +221,17 @@
   height: 100px;
   background-color:#f2f2f2;
   padding: 200px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Arial, Helvetica, sans-serif;
   }
 
-  #div2-1,#div2-2,#div5-1,#div5-2,#div8-1,#div8-2{
+  #ValuesText-1,#ValuesText-2,#HistoryText-1,#HistoryText-2,#AlgebraGroupText-1,#AlgebraGroupText-2{
     width: 800px;
     height: 500px;
     margin:10px;
     text-align: justify;
   }
 
-  #div3{
+ #CardGridContainer-3{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -256,16 +267,33 @@
   height: 50%;
 }
 
-#kakoDoNas{
+#DirectionsCards{
   background-image: url(img/kakoDoNas.jpg);
   height: 750px;
 }
 
-.modal-header{
-  background-color: orange;
-  color: white;
+#FooterPicContainer{
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+  padding: 0px;
+  align-content: center;
 }
 
-.modal-body textarea{
-  height: 200px;
+#FooterPicContainer img{
+  width: 100%;
+  height: 600px;
+  object-fit:cover;
+  position:relative;
+}
+
+#FooterPicContainer h1{
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }

@@ -24,9 +24,9 @@
     transform: translateY(-2px);
   }
 
-  .nav-item,#NewsDiv{
-    animation-name: slideFromTop;
-    animation-duration: 1s;
+  .nav-item{
+    animation-name: slideDown;
+    animation-duration: 1.5s;
     animation-timing-function: ease-out;
     animation-delay: 0s;
     animation-iteration-count: 1;
@@ -46,11 +46,32 @@
     align-items: center;
   }
 
+  .image-container {
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    padding: 0px;
+    align-content: center;
+    margin-top: 200px;
+  }
+
+  
   .image-container img{
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: relative;
+   height: 600px;
+   object-fit:cover;
+   position:relative;
+   }
+
+  .image-container h1{
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
 
   .modal-header{
@@ -60,6 +81,33 @@
   
   .modal-body textarea{
     height: 200px;
+  }
+
+  .image-container{
+    animation-name: slideFromBottom;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+  }
+
+  .container{
+    animation-name: loadingAnimation;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+  }
+
+  #SubjectsDiv{
+    animation-name: loadingAnimation;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
   }
 
   #SubjectsDiv{
@@ -82,4 +130,40 @@
   #labelKolegij{
     font-weight: bold;
     margin-bottom:10px ;
+  }
+
+  @keyframes slideDown{
+    from{
+        transform: translateY(-500px);
+    }
+    to{
+        transform: translateY(0);
+    }
+  }
+
+  @keyframes slideFromTop{
+    from{
+      transform: translateY(-200px);
+    }
+    to{
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideFromBottom{
+    from{
+      transform: translateY(800px);
+    }
+    to{
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes loadingAnimation{
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1.2);
+    }
   }

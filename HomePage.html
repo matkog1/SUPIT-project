@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Home Page</title>
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="HomePage.css">
     <script src="js/bootstrap.bundle.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="HomePage.css">
     <script src="Login.js"></script>
 
 <body>
@@ -54,13 +54,12 @@
             </button>
         </div>
     </nav>
-    <div id="typingVideo">
-        <video autoplay loop muted src="/video/typingOnlaptop.mp4" type="video/mp4"></video>
-        <div id="overlay">
-            <p id="typing-text"></p>
+    <div id="videoContainer" class="container-fluid">
+        <div id="typingVideo">
+            <video autoplay loop muted src="/video/typingOnlaptop.mp4" type="video/mp4"></video>
         </div>
     </div>
-    <div class="container">
+    <div id="contactFormContainer" class="container">
         <div class="modal" id="modalForm">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -105,5 +104,4 @@
         </div>
     </div>
 </body>
-
 </html>
