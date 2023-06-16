@@ -11,6 +11,7 @@
     <script src="js/bootstrap.bundle.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="Login.js"></script>
+    <script src="HomePage.js"></script>
 
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
@@ -54,11 +55,25 @@
             </button>
         </div>
     </nav>
-    <div id="videoContainer" class="container-fluid">
-        <div id="typingVideo">
-            <video autoplay loop muted src="/video/typingOnlaptop.mp4" type="video/mp4"></video>
+    <div id="videoTextContainer" style="position: relative; width: 100%; height: 100vh;">
+        <div id="videoContainer" class="container-fluid" style="position: absolute; width: 100%; height: 100%;">
+            <div id="typingVideo">
+                <video autoplay loop muted src="/video/typingOnlaptop.mp4" type="video/mp4"></video>
+            </div>
+        </div>
+        <div id="container" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1; text-align: center;">
+            <div>
+                <h1 id="first"></h1>
+                <h1 id="second"></h1>
+            </div>
+            <div>
+                <h1 id="third"></h1>
+                <h1 id="fourth"></h1>
+            </div>
         </div>
     </div>
+    
+    
     <div id="contactFormContainer" class="container">
         <div class="modal" id="modalForm">
             <div class="modal-dialog">
@@ -104,4 +119,5 @@
         </div>
     </div>
 </body>
+
 </html>

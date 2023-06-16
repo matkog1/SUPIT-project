@@ -229,6 +229,7 @@
     height: 500px;
     margin:10px;
     text-align: justify;
+    text-overflow: scroll;
   }
 
  #CardGridContainer-3{
